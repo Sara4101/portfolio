@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doota Sara | Portfolio</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f7fb;
+        }
+        header {
+            background: #172554;
+            color: white;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav h1 { font-size: 1.5rem; }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover { color: #93c5fd; }
+        main { max-width: 1100px; margin: auto; }
+        section {
+            padding: 70px 8%;
+            min-height: 350px;
+        }
+        #home {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+        }
+        .hero h2 { font-size: 3rem; color: #172554; margin-bottom: 12px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 24px; }
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        .btn:hover { background: #1d4ed8; }
+        h2.section-title {
+            text-align: center;
+            color: #172554;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        .about-grid, .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            display: block;
+            margin: auto;
+            object-fit: cover;
+            border: 6px solid #bfdbfe;
+        }
+        ul { padding-left: 25px; }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+        article, .card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+        }
+        article h3, .card h3 { color: #1d4ed8; margin-bottom: 8px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+        th { background: #172554; color: white; }
+        tr:nth-child(even) { background: #f8fafc; }
+        .skills li { margin-bottom: 8px; }
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+        }
+        label { display: block; margin-top: 12px; font-weight: bold; }
+        input, textarea, select {
+            width: 100%;
+            padding: 11px;
+            margin-top: 6px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font: inherit;
+        }
+        textarea { min-height: 120px; resize: vertical; }
+        button {
+            margin-top: 18px;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 7px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background: #1d4ed8; }
+        footer {
+            text-align: center;
+            background: #172554;
+            color: white;
+            padding: 25px;
+        }
+        footer a { color: #bfdbfe; }
+        @media (max-width: 700px) {
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 2.2rem; }
+            nav { justify-content: center; }
+            nav h1 { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav aria-label="Main Navigation">
+        <h1>Doota Sara</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section id="home">
+        <div class="hero">
+            <p>Hello, I'm</p>
+            <h2>Doota Sara</h2>
+            <p>Computer Science & Engineering Student | Aspiring Software Developer</p>
+            <a class="btn" href="#projects">View My Projects</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div>
+                <img class="profile-img"
+                     src="https://via.placeholder.com/180"
+                     alt="Profile placeholder image">
+            </div>
+            <article>
+                <h3>Who I Am</h3>
+                <p>
+                    I am a Computer Science and Engineering student interested in
+                    software development, web technologies, data science and machine learning.
+                    I enjoy building practical projects and continuously improving my technical skills.
+                </p>
+                <br>
+                <h3>Career Goal</h3>
+                <p>
+                    My goal is to become a skilled software engineer and work on
+                    innovative technology solutions.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.E. Computer Science & Engineering</td>
+                    <td>Stanley College of Engineering and Technology for Women</td>
+                    <td>2023–2027</td>
+                    <td>Ongoing</td>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>Higher Secondary Education</td>
+                    <td>2021–2023</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="cards">
+            <article>
+                <h3>Programming</h3>
+                <ul class="skills">
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Web Development</h3>
+                <ul class="skills">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                </ul>
+            </article>
+            <article>
+                <h3>AI & Data Science</h3>
+                <ul class="skills">
+                    <li>Machine Learning</li>
+                    <li>NumPy & Pandas</li>
+                    <li>Scikit-learn</li>
+                    <li>TensorFlow</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="cards">
+            <article>
+                <h3>Mental Health Prediction</h3>
+                <p>
+                    A machine learning project that predicts mental-health-related
+                    outcomes using classification algorithms such as Logistic Regression,
+                    Random Forest and KNN.
+                </p>
+            </article>
+            <article>
+                <h3>Student Stress Guardian</h3>
+                <p>
+                    A web application combining a React frontend with a machine-learning
+                    model and FastAPI backend to support student stress prediction.
+                </p>
+            </article>
+            <article>
+                <h3>MovieMatch AI</h3>
+                <p>
+                    A movie recommendation system using TF-IDF and cosine similarity
+                    to recommend movies based on content similarity.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-grid">
+            <article>
+                <h3>Get in Touch</h3>
+                <p>If you would like to connect, you can reach me through the links below.</p>
+                <br>
+                <ul>
+                    <li>Email: <a href="mailto:example@email.com">example@email.com</a></li>
+                    <li>GitHub: <a href="https://github.com/" target="_blank">GitHub Profile</a></li>
+                    <li>LinkedIn: <a href="https://www.linkedin.com/" target="_blank">LinkedIn Profile</a></li>
+                </ul>
+            </article>
+
+            <form action="#" method="post">
+                <h3>Contact Form</h3>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Enquiry</option>
+                    <option value="project">Project Discussion</option>
+                    <option value="collaboration">Collaboration</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Doota Sara. All Rights Reserved.</p>
+    <p><a href="#home">Back to Top</a></p>
+</footer>
+
+</body>
+</html>
